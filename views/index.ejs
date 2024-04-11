@@ -1,0 +1,11 @@
+<!-- views/index.ejs -->
+<h1>Blogs List</h1>
+<ul>
+    <% blogs.forEach(blog => { %>
+        <li><%= blog.title %>
+            <a href="/blogs/edit/<%= blog.id %>">Edit</a> 
+            <a href="/blogs/delete/<%= blog.id %>">Delete</a>
+        </li>
+    <% }); %>
+</ul>
+<a href="/blogs/add">Add Blog</a>
